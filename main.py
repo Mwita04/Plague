@@ -1,4 +1,10 @@
 import os
+from random import randint
+
+def get_days():
+    day = randint(1, 5)
+    return day
+
 
 def make_commit(days: int):
     if days < 1:
@@ -16,6 +22,7 @@ def make_commit(days: int):
         # commit
         os.system('git commit --date="'+dates+'" -m "First Commit"')
 
-        return days * make_commit(days-1)
+        d = get_days()
+        return days * make_commit(days-d)
 
-make_commit(385)
+make_commit(1085)
