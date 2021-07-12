@@ -25,4 +25,4 @@ def make_commit(days: int):
         d = get_days()
         return days * make_commit(days-d)
 
-make_commit(1285)
+make_commit(1585)
