@@ -1,6 +1,7 @@
 import os
 from random import randint
 
+
 def get_days():
     day = randint(1, 5)
     return day
@@ -25,4 +26,5 @@ def make_commit(days: int):
         d = get_days()
         return days * make_commit(days-d)
 
-make_commit(1785)
+
+make_commit(75)
